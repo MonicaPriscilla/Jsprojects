@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EMI Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrapicons.css">
+        <link rel="stylesheet" href="../src/index.css">
+        <script src="../scripts/index.js"></script>
+    </head>
+    <body class="container-fluid" id="body">
+        <header id="header">
+            Basic Javascript Projects
+        </header>
+        <section id="section">
+            <h3 align="center" class="mt-4">Personal Loan EMI Calculator</h3>
+        <div id="emibox"> 
+            <main >
+                <div class="row">
+                    <div class="col">
+                        <div>Amount you need &#8377; &nbsp;<input type="text" onkeyup="txtamtchange()" id="txtamt" size="10"></div>
+                        
+                    </div>
+                    <div class="col">
+                        <span>for <input type="text" onkeyup="txtyearchange()"  id="txtyear" size="2"> years</span>
+                        
+                    </div>
+                    <div class="col">
+                        <span>Interest rate <input type="text" onkeyup="txtintchange()" id="txtint" size="2"> %</span>
+                        
+                    </div>
+                </div>
+                <div class="row two">
+                    <div class="col">
+                        <div>
+                            <span>&#8377; 50,000</span>
+                            <input onchange="amtChange()" id="rangeamt" type="range" class="form-range w-25" value="50000" min="50000" max="4000000">
+                            <span>&#8377; 40,00,000</span>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span>1 Year</span>
+                            <input onchange="yrChange()" id="rangeyr" type="range" class="form-range w-25" value="1"  min="1" max="5">
+                            <span>5 Years</span>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div>
+                            <span>10.85 %</span>
+                            <input onchange="intChange()" id="rangeint" type="range"class="form-range w-25" value="10.85" step="0.1" min="10.85" max="21">
+                            <span>21 %</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row three float-end">
+                    <button class="btn btn-primary " onclick="calclick()">Calculate</button>
+                   
+                </div>
+            </main>
+            
+        </div>
+        <p id="result" class="text-center"></p>
+        </section>
+        <footer>
+
+        </footer>
+        
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
